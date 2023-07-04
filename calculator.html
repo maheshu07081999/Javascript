@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+</head>
+<style>
+  
+    .container{
+        width: 210px;
+        margin: 50px auto;
+        padding: 10px;
+        border: 1px solid #1f1c1c;
+        border-radius: 5px;
+        
+
+    }
+    #Input1{
+        width: 90%;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 18px;
+        border: 1px solid black;
+        background-color: rgba(237, 223, 223, 0.311);
+    }
+    button {
+        padding: 10px;
+        font-size: 16px;
+        background-color: antiquewhite;
+    } 
+    .box{
+        
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+    
+    }
+</style>
+
+<body>
+  
+    <div class="container">
+        <input type="text" id="Input1" disabled >
+        <div class="box">
+
+        <button onclick="clickToClear()">C</button>
+        <button onclick="clickButton('1')">1</button>
+        <button onclick="clickButton('2')">2</button>
+        <button onclick="clickButton('3')">3</button>
+        <button onclick="clickButton('4')">4</button>
+        <button onclick="clickButton('5')">5</button>
+        <button onclick="clickButton('6')">6</button>
+        <button onclick="clickButton('7')">7</button>
+        <button onclick="clickButton('8')">8</button>
+        <button onclick="clickButton('9')">9</button>
+        <button onclick="clickButton('0')">0</button>
+        <button onclick="clickButton('/')">/</button>
+        <button onclick="clickButton('*')">*</button>
+        <button onclick="clickButton('-')">-</button>
+        <button onclick="clickButton('.')">.</button>
+        <button onclick="clickButton('+')">+</button>
+        <button onclick="clickForResult()">=</button>
+    </div>
+    </div>
+    
+    <script>
+
+       function clickButton(value){
+        document.getElementById("Input1").value += value;
+       }
+
+       function clickToClear(){
+        document.getElementById("Input1").value="";
+       }
+       function clickForResult(){
+        let result=eval(document.getElementById("Input1").value);
+
+        document.getElementById("Input1").value=result;
+       }
+   </script>
+</body>
+
+</html>
