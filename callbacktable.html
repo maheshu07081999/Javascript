@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacktable</title>
+</head>
+
+<body>
+    
+
+        Enter Your Name: <input type="text" id="firstname" placeholder="Enter Your Name"><br><br>
+        Enter Your middle Name: <input type="text" id="middlename" placeholder="Enter Your Middle Name"><br><br>
+        Enter Your Last Name: <input type="text" id="lastname" placeholder="Enter Your Middle Name"><br><br>
+        Enter your age: <input type="text" id="Age" placeholder="Enter Age"><br><br>
+        Enter your BOD: <input type="text" id="bod" placeholder="Enter BOD"><br><br>
+        Enter your Adress: <input type="text" id="adress" placeholder="Enter Adress"><br><br>
+        Enter your collage: <input type="text" id="clg" placeholder="Enter collage name"><br><br>
+        Enter Your Mobile Number: <input type="number" id="number" placeholder="Enter Number"><br><br>
+        
+        
+        <button onclick="AddData()">Add Data</button>
+    
+    <table id="mytable" border="1">
+        <tr>
+            <th>NAME</th>
+            <th>MIDDLE NAME</th>
+            <th>LAST NAME</th>
+            <th>AGE</th>
+            <th>BOD</th>
+            <th>ADRESS</th>
+            <th>COLLAGE</th>
+            <th>MOBILE NUMBER</th>
+        </tr>
+    </table>
+
+
+    <script>
+        function AddData() {
+            let name = document.getElementById("firstname").value;
+            let middlename = document.getElementById("middlename").value;
+            let lastname = document.getElementById("lastname").value;
+            let age = document.getElementById("Age").value;
+            let bod = document.getElementById("bod").value;
+            let adress = document.getElementById("adress").value;
+            let collage = document.getElementById("clg").value;
+            let number = document.getElementById("number").value;
+            let table = document.getElementById("mytable");
+
+            var row = table.insertRow(table.rows.length)
+
+            var nameCell = row.insertCell(0)
+            nameCell.innerHTML = name;
+            var middlenameCell = row.insertCell(1)
+            middlenameCell.innerHTML = middlename;
+            var lastnameCell = row.insertCell(2)
+            lastnameCell.innerHTML = lastname;
+            var ageCell = row.insertCell(3)
+            ageCell.innerHTML = age;
+            var ageCell = row.insertCell(4)
+            ageCell.innerHTML = age;
+            var bodCell = row.insertCell(5)
+            bodCell.innerHTML = bod;
+            var adressCell = row.insertCell(6)
+            adressCell.innerHTML = adress;
+            var collageCell = row.insertCell(7)
+            collageCell.innerHTML = collage;
+            var numberCell = row.insertCell(8)
+            numberCell.innerHTML = number;
+
+             document.getElementById("firstname").value = "";
+             document.getElementById("middlename").value = "";
+             document.getElementById("lastname").value = "";
+             document.getElementById("Age").value = "";
+             document.getElementById("bod").value = "";
+             document.getElementById("adress").value = "";
+             document.getElementById("clg").value = "";
+             document.getElementById("number").value = "";
+
+
+        }
+    </script>
+</body>
+
+</html>
