@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" name="myform" onsubmit="return validation()">
+    Enter First Name:- <input type="text" name="fname"><br><br>
+    Enter Middle Name:- <input type="text" name="mname"> <br><br>
+    Enter Last Name:- <input type="text" name="lname"> <br><br>
+    
+    <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validation(){
+            let firstname= document.forms["myform"]["fname"].value;
+            let middlename=document.forms["myform"]["mname"].value;
+            let lastname=document.forms["myform"]["lname"].value;
+
+            if (firstname==""){
+                alert("Enter Please First Name")
+            }else if(middlename==""){
+                alert("Enter Please Middle Name")
+            }else if(lastname==""){
+                alert("Enter Please Last Name")
+            }
+        }
+    </script>
+</body>
+</html>
